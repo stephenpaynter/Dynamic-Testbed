@@ -1,0 +1,16 @@
+devices:
+{% for host in _testbed %}
+  {{ hostvars[host]['inventory_hostname'] }}:
+    connections:
+      cli:
+        ip: {{ hostvars[host]['ansible_host'] }}:
+        protocol: ssh
+    credentials:
+      default:
+        password: {{ hostvars[inventory_hostname]['ansible_ssh_pass'] }}
+        username: {{ hostvars[inventory_hostname]['ansible_user'] }}
+      enable:
+        password: {{ hostvars[inventory_hostname]['ansible_password'] }}
+    os: {{ hostvars[inventory_hostname]['ansible_network_os'] }}
+    type: {{ hostvars[inventory_hostname]['ansible_network_os'] }}
+{% endfor %}
