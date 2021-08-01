@@ -1,6 +1,6 @@
 ## Generate a Cisco pyATS/Genie Testbed file from an Ansible inventory
 
-I use this code to populate a pyATS testbed file from my Ansible Inventories. 
+I use this basic code to populate a pyATS testbed file from my Ansible Inventories. 
 To use this code, ensure that your inventory files are fully populated with the following
 
 ansible_ssh_pass
