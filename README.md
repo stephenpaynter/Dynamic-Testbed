@@ -3,9 +3,9 @@
 I use this basic code to create a pyATS/Genie testbed file from my Ansible Inventories. 
 To use this code, ensure that your inventory files are fully populated with the following
 
-ansible_ssh_pass. 
-ansible_user. 
-ansible_password. 
+ansible_ssh_pass<br/>
+ansible_user<br/>
+ansible_password<br/>
 
 If they are not they will need to be added into the testbed.j2 template file.
 
