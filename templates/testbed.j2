@@ -3,7 +3,7 @@ devices:
   {{ hostvars[host]['inventory_hostname'] }}:
     connections:
       cli:
-        ip: {{ hostvars[host]['ansible_host'] }}:
+        ip: {{ hostvars[host]['ansible_host'] }}
         protocol: ssh
     credentials:
       default:
