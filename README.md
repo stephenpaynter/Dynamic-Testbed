@@ -14,5 +14,5 @@ ie if you are missing the ansible_password from your inventory then remove the f
 
 Any inventory group can be targetted by changing the devices variable, the example given targets the ansible group named "routers"
 
-Testbed file is created in the same folder as the playbook ran from.
+By default the Testbed file is created in the same folder as the playbook ran from, change this via entering the PWD in the dest: under the template module.
 
