@@ -1,10 +1,20 @@
 # Generate a Cisco pyATS/Genie Testbed file from an Ansible inventory
 
-I use this code to create a pyATS/Genie testbed file from my Ansible Inventories. 
+Create pyATS/Genie testbed files from pre-configured Ansible Inventories. If you've already configured and created Ansible Inventory files then this code will allow you to pull all the required data from these files and populate the data into a pyATS/Genie Testbed file.
+
+The code is used to save the time and duplication of having to create an Interactive Testbed when an already provisioned Ansible Inventory files exist.
+
 
 ## Installation
 
-To use this code, ensure that your inventory files are fully populated with the following
+To install, simply clone this repository. No code dependancies are required, only a standard installation of Ansible and pyATS/Genie.
+
+
+## Code Adjustments
+
+The code contains certain criteria which will require adjusting.
+
+- The __devices
 
 ```bash
 ansible_ssh_pass
