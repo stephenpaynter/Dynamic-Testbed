@@ -14,12 +14,14 @@ To install, simply clone this repository. No code dependancies are required, onl
 
 The code contains certain criteria which will require adjusting.
 
-- The __devices
+- The devices varible will require setting to target your chose inventory group. 
+- The more complete the Ansible Inventory file is the less additional code adjusts will be required. The following fields within the Ansible Inventory are required for the code to function without any amends.
 
 ```bash
 ansible_ssh_pass
 ansible_user
 ansible_password
+ansible_network_os
 ```
 
 ## Usage
