@@ -2,15 +2,16 @@
 
 Create pyATS/Genie testbed files from pre-configured Ansible Inventories. If you've already configured and created Ansible Inventory files then this code will allow you to pull all the required data from these files and populate the data into a pyATS/Genie Testbed file.
 
-The code is used to save the time and duplication of having to create an Interactive Testbed when an already provisioned Ansible Inventory files exist.
+## Use Case Description
 
+The code is used to save the time and duplication of having to create an Interactive Testbed when an already provisioned Ansible Inventory files exist. The code uses an Ansible inventory group, flattens it to a list and runs a loop to populate a testbed file via a Jinja2 template.
 
 ## Installation
 
 To install, simply clone this repository. No code dependancies are required, only a standard installation of Ansible and pyATS/Genie.
 
 
-## Code Adjustments
+## Configuration
 
 The code contains certain criteria which will require adjusting.
 
@@ -39,8 +40,12 @@ password: yourpassword
 
 The same applies for other values. If you are using an encypted password ensure the encrypted value is surrounded by single quotes.
 
-## Defaults
+By default the Testbed file is created in the same folder as the playbook ran from, this can be changed via entering the PWD in the dest: under the template module in the PyatsTestbed.yml file.
 
-Any inventory group can be targetted by changing the _devices variable, the example given targets the ansible group named "routers"
+## Usage
 
-By default the Testbed file is created in the same folder as the playbook ran from, change this via entering the PWD in the dest: under the template module.
+To run the code use the following command
+
+```yaml
+ansible-playbook PyatsTestbed.yml
+```
