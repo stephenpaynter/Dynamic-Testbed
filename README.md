@@ -24,21 +24,20 @@ ansible_password
 ansible_network_os
 ```
 
-## Usage
+- If the above fields do not exist they can be manually added within the /templates/testbed.j2 file. Simply remove the varible and replace with your chosen value.
 
-If the above variables are not configured in your inventory files then manually edit the templates/testbed.j2 jinja2 template
+For example if the ansible_password field is not configured and all your devices have the same password simple do the following.
 
 Replace
 ```yaml
 password: {{ hostvars[inventory_hostname]['ansible_password'] }}
 ```
-
 With
 ```yaml
 password: yourpassword
 ```
 
-The same applies for ansible_user and ansible_ssh_pass.
+The same applies for other values. If you are using an encypted password ensure the encrypted value is surrounded by single quotes.
 
 ## Defaults
 
