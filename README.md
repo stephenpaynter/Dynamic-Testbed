@@ -53,3 +53,8 @@ ansible-playbook PyatsTestbed.yml
 
 If you have questions you can look me up on Twitter @stephenpaynter.
 Any bug reports, etc., please create an issue against this repository.
+
+# Cisco Developer Code Exchange
+This repo has been submited to the Cisco Developer Code Exchange.
+
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/itheodoridis/itheodoridis-createtestbedsfromPI)
